@@ -19,7 +19,15 @@ public class EnemyMomement : MonoBehaviour
     // private float timeSinceLastSpawn = 0.0f;
 
 
-    
+    //datos para daño de jugador
+    public int daño = 20;
+    public VidaJugador VidaPlayer;
+    GameObject player;
+
+    //datos para daño de enemigo
+    public HealthBarEnemy vida;
+    public int Salud = 100;
+
 
 
     private void Update()
@@ -53,7 +61,32 @@ public class EnemyMomement : MonoBehaviour
         }
     }
 
-    
+
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        VidaPlayer = VidaPlayer.GetComponent<VidaJugador>();
+        
+
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            VidaPlayer.RecibirDaño(daño);
+        }
+
+        if (collision.gameObject.CompareTag("bullet"))
+        {
+            vida.takeDaño(daño);
+            
+        }
+    }
+
+    public void DieEnemy()
+    {
+        Destroy(gameObject);
+    }
 
 
 

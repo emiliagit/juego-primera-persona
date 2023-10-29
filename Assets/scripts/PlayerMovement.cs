@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float VelocidadDesplazamiento = 10.0f;
+    public float moveSpeed = 10.0f;
+    //private int salud = 100;
 
     void Start()
     {
@@ -14,8 +15,10 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float MovAdelanteAtras = Input.GetAxis("Vertical") * VelocidadDesplazamiento;
-        float MovIzqDer = Input.GetAxis("Horizontal") * VelocidadDesplazamiento;
+
+
+        float MovAdelanteAtras = Input.GetAxis("Vertical") * moveSpeed;
+        float MovIzqDer = Input.GetAxis("Horizontal") * moveSpeed;
 
         MovAdelanteAtras *= Time.deltaTime;
         MovIzqDer *= Time.deltaTime;
@@ -27,4 +30,6 @@ public class PlayerMovement : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         }
     }
+
+    
 }

@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class VidaJugador : MonoBehaviour
+{
+    public int daño = 20;
+    public Slider slider;
+    public int life = 100;
+
+    public PlayerMovement Muerte;
+
+    private GameManager screen;
+
+    private void Update()
+    {
+        slider.value = life;
+    }
+
+    public void RecibirDaño(int Damage)
+    {
+        life -= daño;
+
+        if (life <= 0)
+        {
+            GameManager.Instance.ShowGameOverScreen();
+        }
+    }
+}

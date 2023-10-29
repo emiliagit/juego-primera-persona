@@ -5,24 +5,30 @@ using UnityEngine.UI;
 
 public class HealthBarEnemy : MonoBehaviour
 {
+    private int daño = 20;
+    public Slider slider;
+    public int Salud = 100;
 
-    //public Slider slider;
-    //public int SaludInicial = 100;
-    //public int SaludActual;
+    public EnemyMomement muerte;
 
-    //private void Awake()
-    //{
-    //    SaludActual = SaludInicial;
-    //}
+    
+    private void Update()
+    {
+        slider.value = Salud;
+    }
 
-    //public void takeDaño( int ValorDaño)
-    //{
-    //    SaludActual -= ValorDaño;
-    //    slider.value = SaludActual;
+    public void takeDaño(int ValorDaño)
+    {
+        Salud -= daño;
+        Debug.Log("daño");
 
-    //    //if(SaludActual<=0)
-    //    //{
-    //    //    Destroy(gameObject);
-    //    //}
-    //}
+        if (Salud <= 0)
+        {
+            muerte.DieEnemy();
+        }
+    }
+
+
+
+    
 }
