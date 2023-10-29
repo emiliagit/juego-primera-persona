@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class bullet : MonoBehaviour
-//{
+{
 //    public int daño = 20; // Cantidad de daño que la bala inflige al enemigo
 
 //    GameObject enemigo;
@@ -28,4 +28,4 @@ public class bullet : MonoBehaviour
 //            Debug.Log("null");
 //        }
 //    }
-//}
+}
