@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 10.0f;
-    //private int salud = 100;
 
     void Start()
     {

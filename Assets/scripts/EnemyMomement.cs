@@ -11,13 +11,7 @@ public class EnemyMomement : MonoBehaviour
     public Transform jugador; // Referencia al transform del jugador
     public float velocidad = 2.0f;   // Velocidad a la que el enemigo seguirá al jugador
 
-    //spawn de enemigos en mapa
-    public GameObject enemyPrefab; // El prefabricado del enemigo 
-    public float spawnInterval = 10.0f; // El intervalo de tiempo entre cada generación de enemigos
-    public float spawnRadius = 10.0f;
-
-    private float timeSinceLastSpawn = 0.0f;
-
+    
 
     //datos para daño de jugador
     public int daño = 20;
@@ -27,7 +21,6 @@ public class EnemyMomement : MonoBehaviour
     //datos para daño de enemigo
     public HealthBarEnemy vida;
     public int Salud = 100;
-
 
 
     private void Update()
@@ -51,35 +44,32 @@ public class EnemyMomement : MonoBehaviour
             transform.LookAt(jugador); //hace que mire al jugador
 
 
-            timeSinceLastSpawn += Time.deltaTime;
-
-            if (timeSinceLastSpawn >= spawnInterval)
-            {
-                SpawnEnemy();
-                timeSinceLastSpawn = 0.0f;
-            }
+            
         }
     }
 
 
     private void Awake()
     {
-        player = GameObject.FindGameObjectWithTag("Player");
-        VidaPlayer = VidaPlayer.GetComponent<VidaJugador>();
-        
+        {
 
+            player = GameObject.FindGameObjectWithTag("Player");
+            VidaPlayer = VidaPlayer.GetComponent<VidaJugador>();
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
         {
-            VidaPlayer.RecibirDaño(daño);
-        }
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                VidaPlayer.RecibirDaño(daño);
+            }
 
-        if (collision.gameObject.CompareTag("bullet"))
-        {
-            vida.takeDaño(daño);
-            
+            if (collision.gameObject.CompareTag("bullet"))
+            {
+                vida.takeDaño(daño);
+
+            }
         }
     }
 
@@ -88,16 +78,8 @@ public class EnemyMomement : MonoBehaviour
         Destroy(gameObject);
     }
 
-
-
-    void SpawnEnemy()
-    {
-        Vector3 randomPosition = transform.position + new Vector3(Random.Range(-spawnRadius, spawnRadius), 0, Random.Range(-spawnRadius, spawnRadius));
-        GameObject newEnemy = Instantiate(enemyPrefab, randomPosition, Quaternion.identity);
-    }
-
-
-
+    
+        
 
 }
 

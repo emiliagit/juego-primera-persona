@@ -9,10 +9,6 @@ public class VidaJugador : MonoBehaviour
     public Slider slider;
     public int life = 100;
 
-    public PlayerMovement Muerte;
-
-    private GameManager screen;
-
     private void Update()
     {
         slider.value = life;

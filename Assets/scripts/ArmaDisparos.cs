@@ -9,7 +9,7 @@ public class ArmaDisparos : MonoBehaviour
     
     [SerializeField] private Transform puntoDeOrigen; // origen del disparo
 
-    [SerializeField] private float velocidadBala = 10f;
+    [SerializeField] private float velocidadBala = 80f;
     [SerializeField] private float cadenciaDisparo = 0.5F; //velocidad de disparo
 
     private float tiempoUltimoDisparo;
