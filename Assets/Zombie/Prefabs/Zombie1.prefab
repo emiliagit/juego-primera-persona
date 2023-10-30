@@ -1138,7 +1138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 5720460737832207620}
   Salud: 100
-  muerte: {fileID: 2612381538056784563}
+  zombie: {fileID: 4493914613880827488}
 --- !u!1 &2643020092499374607
 GameObject:
   m_ObjectHideFlags: 0
@@ -2089,20 +2089,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   jugador: {fileID: 0}
   velocidad: 2
-  enemyPrefab: {fileID: 4493914613880827488}
-  spawnInterval: 7
-  enemy:
-  - {fileID: 4493914613880827488}
-  - {fileID: 4493914613880827488}
-  spawnPosition:
-  - {x: -15.1, y: 0.99, z: 8.1}
-  - {x: 10.9, y: 0.99, z: -41.1}
-  maxEnemyCount: 5
-  currentEnemyCount: 0
   "da\xF1o": 20
   VidaPlayer: {fileID: 0}
   vida: {fileID: 3934881539819292284}
-  Salud: 100
 --- !u!1 &4710940672626480558
 GameObject:
   m_ObjectHideFlags: 0

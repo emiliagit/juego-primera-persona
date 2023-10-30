@@ -8,12 +8,12 @@ public class EnemyMomement : MonoBehaviour
 {
 
     //movimientos de seguir al jugador
-    public Transform jugador; // Referencia al transform del jugador
+    private Transform jugador; // Referencia al transform del jugador
     public float velocidad = 2.0f;   // Velocidad a la que el enemigo seguirá al jugador
 
     //datos para daño de jugador
     public int daño = 20;
-    public VidaJugador VidaPlayer;
+    private VidaJugador VidaPlayer;
     GameObject player;
 
     //datos para daño de enemigo
@@ -47,6 +47,8 @@ public class EnemyMomement : MonoBehaviour
         {
 
             player = GameObject.FindGameObjectWithTag("Player");
+            VidaPlayer = FindObjectOfType<VidaJugador>();
+            jugador = player.transform;
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -65,10 +67,10 @@ public class EnemyMomement : MonoBehaviour
         }
     }
 
-    public void DieEnemy()
-    {
-        Destroy(gameObject);
-    }
+    //public void DieEnemy()
+    //{
+    //    Destroy(gameObject);
+    //}
 
     
         
