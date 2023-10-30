@@ -1806,7 +1806,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 0.6037736, g: 0.6037736, b: 0.6037736, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -12378,7 +12378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   "da\xF1o": 20
-  slider: {fileID: 0}
+  slider: {fileID: 1068410092}
   life: 100
 --- !u!114 &1118380159
 MonoBehaviour:
@@ -19430,9 +19430,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7155335d0bcc51f459030cb4d8f4ec5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: 0
-  seg: 0
-  tiempo: {fileID: 0}
+  seg: 30
+  tiempo: {fileID: 1383054344}
 --- !u!1001 &1932914235
 PrefabInstance:
   m_ObjectHideFlags: 0

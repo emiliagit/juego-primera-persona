@@ -6,7 +6,9 @@ using UnityEngine.UI;
 
 public class timer : MonoBehaviour
 {
-    [SerializeField] int min, seg;
+     private int min = 0;
+    [SerializeField] private int seg = 40;
+   
     [SerializeField] TextMeshProUGUI tiempo;
     private int life = 100;
 
@@ -32,10 +34,10 @@ public class timer : MonoBehaviour
             }
             if (restante <= 0 && life >= 1)
             {
+                EnMarcha = false;
                 GameManager.Instance.ShowWinScreen();
 
             }
-
 
             int tempMin = Mathf.FloorToInt(restante / 60);
             int tempSeg = Mathf.FloorToInt(restante % 60);
