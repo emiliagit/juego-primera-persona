@@ -11,8 +11,6 @@ public class EnemyMomement : MonoBehaviour
     public Transform jugador; // Referencia al transform del jugador
     public float velocidad = 2.0f;   // Velocidad a la que el enemigo seguirá al jugador
 
-    
-
     //datos para daño de jugador
     public int daño = 20;
     public VidaJugador VidaPlayer;
@@ -20,7 +18,6 @@ public class EnemyMomement : MonoBehaviour
 
     //datos para daño de enemigo
     public HealthBarEnemy vida;
-    //private int Salud = 100;
 
 
     private void Update()

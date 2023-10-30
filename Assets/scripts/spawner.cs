@@ -16,7 +16,7 @@ public class spawner : MonoBehaviour
 
     //cantidad de enemigos en mapa
     public int maxEnemyCount = 6;  
-    public int currentEnemyCount = 0;
+    private int currentEnemyCount = 0;
     // Start is called before the first frame update
 
     private void Update()
