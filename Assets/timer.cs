@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class timer : MonoBehaviour
 {
-     private int min = 1;
+     private int min = 1;  
      private int seg = 30;
    
     [SerializeField] TextMeshProUGUI tiempo;
