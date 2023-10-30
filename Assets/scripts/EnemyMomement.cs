@@ -15,7 +15,7 @@ public class EnemyMomement : MonoBehaviour
 
     //datos para daño de jugador
     public int daño = 20;
-    private VidaJugador VidaPlayer;
+    public VidaJugador VidaPlayer;
     GameObject player;
 
     //datos para daño de enemigo

@@ -12359,7 +12359,7 @@ GameObject:
   - component: {fileID: 1118380159}
   - component: {fileID: 1118380158}
   m_Layer: 5
-  m_Name: Vida Jugador
+  m_Name: Vida Jugador Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19329,7 +19329,7 @@ GameObject:
   - component: {fileID: 1924403067}
   - component: {fileID: 1924403071}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: time Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20748,7 +20748,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2040945178}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_RenderMode: 0
   m_Camera: {fileID: 963194227}
