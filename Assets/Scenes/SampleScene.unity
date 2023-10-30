@@ -5303,16 +5303,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0e22861207dfae40b8618e168bbf782, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 0}
+  enemyPrefab: {fileID: 586832855}
   spawnInterval: 8
   enemy:
   - {fileID: 586832855}
+  - {fileID: 586832855}
+  - {fileID: 586832855}
   spawnPosition:
-  - {x: -15.1, y: 0.99, z: 3.2}
-  - {x: 11.3, y: 0.99, z: -42}
-  - {x: -14.3, y: 0.99, z: -29.3}
+  - {x: 10.74, y: 0.32, z: -39.1}
+  - {x: 10.74, y: 0.32, z: 11.53}
+  - {x: -14, y: 0.32, z: -11.2}
   maxEnemyCount: 5
-  currentEnemyCount: 0
 --- !u!4 &603161686
 Transform:
   m_ObjectHideFlags: 0
@@ -5322,7 +5323,7 @@ Transform:
   m_GameObject: {fileID: 603161684}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.683033, y: -2.8009515, z: -8.246874}
+  m_LocalPosition: {x: -14, y: 0.32, z: -11.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19430,7 +19431,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7155335d0bcc51f459030cb4d8f4ec5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  seg: 30
   tiempo: {fileID: 1383054344}
 --- !u!1001 &1932914235
 PrefabInstance:
@@ -21865,6 +21865,7 @@ PrefabInstance:
       objectReference: {fileID: 44476552}
     m_RemovedComponents:
     - {fileID: 0}
+    - {fileID: 7922193393757791250, guid: de2e96c858ab08d4796d26ae59a3d97f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
