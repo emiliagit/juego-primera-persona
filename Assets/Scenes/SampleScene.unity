@@ -5293,7 +5293,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 586832855}
-  spawnInterval: 8
+  spawnInterval: 10
   enemy:
   - {fileID: 586832855}
   - {fileID: 586832855}
