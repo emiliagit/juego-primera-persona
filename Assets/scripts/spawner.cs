@@ -7,7 +7,7 @@ public class spawner : MonoBehaviour
 
     //spawn de enemigos en mapa
     public GameObject enemyPrefab; // El prefabricado del enemigo 
-    public float spawnInterval = 8.0f; // El intervalo de tiempo entre cada generación de enemigos
+    public float spawnInterval = 10.0f; // El intervalo de tiempo entre cada generación de enemigos
     //private float timeSinceLastSpawn = 0.0f;
 
     //listas para posicion de enemigos;
@@ -15,7 +15,7 @@ public class spawner : MonoBehaviour
     public Vector3[] spawnPosition;
 
     //cantidad de enemigos en mapa
-    public int maxEnemyCount = 6;  
+    //public int maxEnemyCount = 6;
     public int currentEnemyCount = 0;
     // Start is called before the first frame update
 
@@ -38,25 +38,25 @@ public class spawner : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (currentEnemyCount >= maxEnemyCount)
-        {
-            spawnerActive = false;
-            Debug.Log("se desactivo spawner");
-        }
-        if (currentEnemyCount < maxEnemyCount)
-        {
-            spawnerActive = true;
-            Debug.Log("se activo spawner");
-        }
-    }
+    //private void Update()
+    //{
+    //    if (currentEnemyCount >= maxEnemyCount)
+    //    {
+    //        spawnerActive = false;
+    //        //Debug.Log("se desactivo spawner");
+    //    }
+    //    if (currentEnemyCount < maxEnemyCount)
+    //    {
+    //        spawnerActive = true;
+    //        //Debug.Log("se activo spawner");
+    //    }
+    //}
 
     void SpawnEnemy()
     {
-        if (currentEnemyCount < maxEnemyCount)
-        {
-            currentEnemyCount++;//contador de enemigos
+        //if (currentEnemyCount < maxEnemyCount)
+        //{
+           // currentEnemyCount++;//contador de enemigos
 
             int randomIndex = Random.Range(0, enemy.Length);
             int randomPosition = Random.Range(0, spawnPosition.Length);
@@ -65,39 +65,6 @@ public class spawner : MonoBehaviour
 
             Instantiate(randomEnemy, spawnPosition[randomPosition], randomEnemy.transform.rotation);
 
-            //int randomIndex = Random.Range(0, enemy.Length);
-            //int randomPosition = Random.Range(0, spawnPosition.Length);
-
-            //GameObject randomEnemy = enemy[randomIndex];
-
-            //Instantiate(randomEnemy, spawnPosition[randomPosition], randomEnemy.transform.rotation);
-            //currentEnemyCount++;//contador de enemigos
-        }
+            
     }
-
-    //private void Update()
-    //{
-    //    timeSinceLastSpawn += Time.deltaTime;
-
-    //    if (timeSinceLastSpawn >= spawnInterval)
-    //    {
-    //        SpawnEnemy();
-    //        timeSinceLastSpawn = 0.0f;
-    //    }
-    //}
-    //void SpawnEnemy()
-    //{
-    //    if (currentEnemyCount < maxEnemyCount)
-    //    {
-    //            int randomIndex = Random.Range(0, enemy.Length);
-    //            int randomPosition = Random.Range(0, spawnPosition.Length);
-
-    //            GameObject randomEnemy = enemy[randomIndex];
-
-    //            Instantiate(randomEnemy, spawnPosition[randomPosition], randomEnemy.transform.rotation);
-    //            currentEnemyCount++;//contador de enemigos
-
-
-    //    }
-    //}
 }

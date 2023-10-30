@@ -9,7 +9,9 @@ public class HealthBarEnemy : MonoBehaviour
     public Slider slider;
     public int Salud = 100;
 
-    public EnemyMomement muerte;
+    public GameObject zombie;
+
+    //public EnemyMomement muerte;
 
     
     private void Update()
@@ -24,7 +26,9 @@ public class HealthBarEnemy : MonoBehaviour
 
         if (Salud <= 0)
         {
-            muerte.DieEnemy();
+            Destroy(gameObject);
+            Destroy(zombie);
+
         }
     }
 
