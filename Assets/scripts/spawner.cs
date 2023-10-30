@@ -15,7 +15,7 @@ public class spawner : MonoBehaviour
     public Vector3[] spawnPosition;
 
     //cantidad de enemigos en mapa
-    public int maxEnemyCount = 6;
+    public int maxEnemyCount = 6;  
     public int currentEnemyCount = 0;
     // Start is called before the first frame update
 

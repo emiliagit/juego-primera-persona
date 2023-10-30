@@ -9,6 +9,7 @@ public class VidaJugador : MonoBehaviour
     public Slider slider;
     public int life = 100;
 
+
     private void Update()
     {
         slider.value = life;
@@ -22,5 +23,6 @@ public class VidaJugador : MonoBehaviour
         {
             GameManager.Instance.ShowGameOverScreen();
         }
+        
     }
 }

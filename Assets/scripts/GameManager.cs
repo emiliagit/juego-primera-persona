@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject GameOverScreen;
+    [SerializeField] private GameObject WinScreen;
 
     public CamaraMovement controlCamera;
 
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         GameOverScreen.SetActive(false);
+        WinScreen.SetActive(false);
     }
     public void ShowGameOverScreen()
     {
@@ -35,6 +37,20 @@ public class GameManager : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
     }
 
+    public void ShowWinScreen()
+    {
+        WinScreen.SetActive(true);
+        Time.timeScale = 0f;
+
+        controlCamera.enabled = false;
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void WinRestart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
+    }
     public void RestartScene()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

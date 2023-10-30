@@ -15,18 +15,17 @@ public class EnemyMomement : MonoBehaviour
 
     //datos para daño de jugador
     public int daño = 20;
-    public VidaJugador VidaPlayer;
+    private VidaJugador VidaPlayer;
     GameObject player;
 
     //datos para daño de enemigo
     public HealthBarEnemy vida;
-    public int Salud = 100;
+    //private int Salud = 100;
 
 
     private void Update()
     {
         {
-
             // Verificar si tenemos una referencia al jugador
             if (jugador == null)
             {
@@ -42,9 +41,6 @@ public class EnemyMomement : MonoBehaviour
             transform.Translate(direccion * velocidad * Time.deltaTime, Space.World); // Usar Space.World para mover en el mundo
 
             transform.LookAt(jugador); //hace que mire al jugador
-
-
-            
         }
     }
 
@@ -54,7 +50,6 @@ public class EnemyMomement : MonoBehaviour
         {
 
             player = GameObject.FindGameObjectWithTag("Player");
-            VidaPlayer = VidaPlayer.GetComponent<VidaJugador>();
         }
     }
     private void OnCollisionEnter(Collision collision)
