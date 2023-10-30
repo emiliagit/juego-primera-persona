@@ -12,7 +12,6 @@ public class timer : MonoBehaviour
     [SerializeField] TextMeshProUGUI tiempo;
     private int life = 100;
 
-
     private float restante;
     private bool EnMarcha;
 
